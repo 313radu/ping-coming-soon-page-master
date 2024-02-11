@@ -1,0 +1,227 @@
+:root {
+
+    --minWidth: 375px;
+    --maxWidth: 1440px;
+
+    /* Colors */
+
+    --clr-primary-100: hsl(223, 87%, 63%);
+
+    --clr-secondary-100: hsl(223, 100%, 88%);
+    --clr-secondary-200: hsl(354, 100%, 66%);
+
+    --clr-neutral-100: hsl(0, 0%, 59%);
+    --clr-neutral-200: hsl(209, 33%, 12%);
+
+    /* Font Size */
+
+    --fs-100: 1.25rem;
+
+    /* Font Family */
+
+    --ff-100: 'Libre Franklin', sans-serif;
+
+    /* Font Weights */
+    --fw-100: 300;
+    --fw-200: 600;
+    --fw-300: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Global Setup */
+
+/* Header */
+
+header {
+    max-width: var(--maxWidth);
+    min-width: var(--minWidth);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-block-start: 2.5em;
+}
+
+header img {
+    width: 80px;
+    height: 25px;
+    display: block;
+    margin-bottom: 1.5em;
+}
+
+header h1 {
+    font-size: calc(var(--fs-100) + 1.6rem);
+    font-family: var(--ff-100);
+}
+
+header h1 span:nth-child(1) {
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-100);
+}
+
+header h1 span:nth-child(2) {
+    color: hsl(0, 0%, 0%);
+    font-weight: bolder;
+    text-shadow: 3px 0 0 hsl(0, 0%, 0%);
+    letter-spacing: 2px;
+}
+
+header h2 {
+    font-size: calc(var(--fs-100) + 1px);
+    font-family: var(--ff-100);
+    font-weight: var(--fw-100);
+    padding-bottom: 2em;
+}
+
+main {
+    max-width: var(--maxWidth);
+    min-width: var(--minWidth);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-block-end: 4em;
+    position: relative;
+}
+
+main form input {
+    height: 50px;
+}
+
+main form input[type="email"] {
+    width: 350px;
+    border: 2px solid var(--clr-secondary-100);
+    border-radius: 3em;
+    text-indent: 2em;
+    font-family: var(--ff-100);
+}
+
+main form input[type="email"]::placeholder {
+    font-family: var(--ff-100);
+    color: var(--clr-neutral-100);
+    font-size: calc(var(--fs-100) - .3rem);
+}
+
+main form input[type="submit"] {
+
+    --clr-shadow: hsla(215, 82%, 65%, 0.546);
+
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    font-size: calc(var(--fs-100) - .2rem);
+    color: hsl(0, 0%, 100%);
+    background-color: var(--clr-primary-100);
+    border-radius: 3em;
+    box-shadow: 0px 3px 8px 1px var(--clr-shadow);
+    transition: 1s all;
+}
+
+main form input[type="submit"]:hover,
+main form input[type="submit"]:focus {
+    color: rgb(0, 0, 0);
+    background: linear-gradient(90deg, hsl(174, 70%, 82%) 0%, hsl(168, 63%, 79%) 20%, hsl(162, 55%, 75%) 40%, hsl(156, 48%, 71%) 60%, hsl(150, 41%, 67%) 80%, hsl(144, 34%, 64%) 100%);
+    transition: 1s all;
+}
+
+main form span {
+    width: 350px;
+    display: none;
+    position: absolute;
+    bottom: -40%;
+    left: 26%;
+    font-size: calc(var(--fs-100) - .6rem);
+    font-family: var(--ff-100);
+    color: var(--clr-secondary-200);
+    text-align: center;
+}
+
+main .picture {
+    width: 52%;
+    margin-block-start: 2em;
+}
+
+main .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Footer  */
+
+footer {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
+
+footer .social-icons a {
+    width: 30px;
+    height: 30px;
+    text-decoration: none;
+    color: var(--clr-primary-100);
+    border: 1px solid var(--clr-secondary-100);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+footer .social-icons a:hover,
+footer .social-icons a:focus {
+    color: hsl(0, 0%, 100%);
+    background-color: var(--clr-primary-100);
+    transition: 300ms ease;
+}
+
+footer .social-icons a i {
+    font-size: calc(var(--fs-100) - .35rem);
+    transition: 300ms ease;
+}
+
+footer small {
+    margin-block-start: 2em;
+    color: var(--clr-neutral-100);
+}

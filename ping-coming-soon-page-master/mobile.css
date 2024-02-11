@@ -1,0 +1,88 @@
+:root {
+
+    --minWidth: 375px;
+    --maxWidth: 1440px;
+
+    /* Colors */
+    --clr-primary-100: hsl(223, 87%, 63%);
+
+    --clr-secondary-100: hsl(223, 100%, 88%);
+    --clr-secondary-200: hsl(354, 100%, 66%);
+
+    --clr-neutral-100: hsl(0, 0%, 59%);
+    --clr-neutral-200: hsl(209, 33%, 12%);
+
+    /* Font Size */
+    --fs-100: 1.25rem;
+
+    /* Font Family */
+    --ff-100: 'Libre Franklin', sans-serif;
+
+    /* Font Weights */
+    --fw-100: 300;
+    --fw-200: 600;
+    --fw-300: 600;
+}
+
+@media all and (max-width: 838px) {
+
+    body {
+        width: 100%;
+    }
+
+    /* Header */
+    header img {
+        margin: 1.5em 0em;
+        width: 75px;
+        height: 20px;
+    }
+
+    header h1 {
+        font-size: calc(var(--fs-100) + .4rem);
+        margin-block: 1em 0.3em;
+    }
+
+    header h2 {
+        font-size: calc(var(--fs-100) - 4px);
+    }
+
+    /* Form  */
+    main form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        gap: 2.5em;
+        overflow-x: hidden;
+        height: 160px;
+    }
+
+    main form input[type="submit"] {
+        width: 350px;
+    }
+
+    main form span {
+        width: 350px;
+        height: 20px;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: calc(var(--fs-100) - .5rem);
+    }
+
+    main .picture {
+        width: 77%;
+    }
+
+    /* Footer  */
+
+    footer {
+        height: 200px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+}
